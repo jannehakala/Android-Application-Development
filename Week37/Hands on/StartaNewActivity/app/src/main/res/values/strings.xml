@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Start a New Activity</string>
+    <string name="button_name">Start a New Activity</string>
+    <string name="hello2_text">Text in a New Activity</string>
+</resources>
