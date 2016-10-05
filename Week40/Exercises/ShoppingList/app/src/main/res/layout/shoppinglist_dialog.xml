@@ -1,56 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="Add a new product"
-        android:id="@+id/dialogTitle" />
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Product:"
-                android:id="@+id/productName" />
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/productNameEdit" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Count:"
-                android:id="@+id/productCount" />
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/productCountEdit" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Price:"
-                android:id="@+id/productPrice" />
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/productPriceEdit"
-                android:inputType="number|numberDecimal"/>
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Product:"
+            android:layout_alignParentLeft="true"/>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/productName"
+            android:layout_alignParentRight="true"/>
+
     </LinearLayout>
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Count:"
+            android:layout_alignParentLeft="true"/>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:id="@+id/productCount"
+            android:layout_alignParentRight="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Price:" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/productPrice"
+            android:inputType="number|numberDecimal"
+            android:layout_alignParentRight="true"/>
+
+    </LinearLayout>
 
 </LinearLayout>
