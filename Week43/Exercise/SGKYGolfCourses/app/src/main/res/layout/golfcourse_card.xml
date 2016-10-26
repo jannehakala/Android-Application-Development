@@ -5,7 +5,7 @@
 
     <android.support.v7.widget.CardView
         android:foreground="?android:attr/selectableItemBackground"
-        android:id="@+id/employeeCardView"
+        android:id="@+id/golfCourseCardView"
         android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,36 +21,36 @@
                 android:layout_marginRight="4dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/employeeImageView" />
+                android:id="@+id/golfCourseImageView" />
 
             <TextView
-                android:layout_toRightOf="@+id/employeeImageView"
+                android:layout_toRightOf="@+id/golfCourseImageView"
                 android:layout_alignParentTop="true"
-                android:id="@+id/employeeNameTextView"
+                android:id="@+id/golfCourseNameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp" />
 
             <TextView
-                android:layout_toRightOf="@+id/employeeImageView"
-                android:layout_below="@id/employeeNameTextView"
-                android:id="@+id/employeePositionTextView"
+                android:layout_toRightOf="@+id/golfCourseImageView"
+                android:layout_below="@id/golfCourseNameTextView"
+                android:id="@+id/golfCourseAddressTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp" />
 
             <TextView
-                android:layout_toRightOf="@+id/employeeImageView"
-                android:layout_below="@id/employeePositionTextView"
-                android:id="@+id/employeeEmailTextView"
+                android:layout_toRightOf="@+id/golfCourseImageView"
+                android:layout_below="@id/golfCourseAddressTextView"
+                android:id="@+id/golfCoursePhoneTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp" />
 
             <TextView
-                android:layout_toRightOf="@+id/employeeImageView"
-                android:layout_below="@id/employeeEmailTextView"
-                android:id="@+id/employeePhoneTextView"
+                android:layout_toRightOf="@+id/golfCourseImageView"
+                android:layout_below="@id/golfCoursePhoneTextView"
+                android:id="@+id/golfCourseEmailTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp" />

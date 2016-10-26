@@ -2,8 +2,6 @@ package fi.jamk.sgkygolfcourses;
 
 import android.os.AsyncTask;
 import android.util.Log;
-import android.view.View;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -21,9 +19,13 @@ import java.util.List;
  * Created by H3298 on 10/25/2016.
  */
 
-public class FetchDataTask extends AsyncTask<String, ArrayList<String>, JSONObject> {
-    private List<Employee> employeeList;
+public class FetchDataTask extends AsyncTask<String, Void, JSONObject> {
+    private List<Golfcourse> golfcourseList;
     private JSONArray golfCourses;
+    public Response response = null;
+
+    public FetchDataTask(){}
+
 
     @Override
     protected JSONObject doInBackground(String... urls) {
@@ -47,22 +49,21 @@ public class FetchDataTask extends AsyncTask<String, ArrayList<String>, JSONObje
         } finally {
             if (urlConnection != null) urlConnection.disconnect();
         }
-
         return json;
     }
 
-    protected ArrayList<String> onPostExecute(JSONObject json) {
+    protected void onPostExecute(JSONObject json) {
         try {
             golfCourses = json.getJSONArray("kentat");
-            employeeList = new ArrayList<>();
+            golfcourseList = new ArrayList<>();
             for (int i = 0; i < golfCourses.length(); i++) {
                 JSONObject golfJson = golfCourses.getJSONObject(i);
-                employeeList.add(new Employee(golfJson.getString("Kentta"), golfJson.getString("Osoite"),golfJson.getString("Sahkoposti"),golfJson.getString("Puhelin"),golfJson.getString("Kuva")));
+                golfcourseList.add(new Golfcourse(golfJson.getString("Kentta"), golfJson.getString("Osoite"),golfJson.getString("Sahkoposti"),golfJson.getString("Puhelin"),golfJson.getString("Kuva")));
             }
-            return employeeList;
         } catch (JSONException e) {
             Log.e("JSON", "Error getting data.");
         }
+        response.onJSONparserComplete(golfcourseList);
     }
 }
 
